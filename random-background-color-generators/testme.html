@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf=8">
+        <style type="text/css">
+            #posts,
+            #posts1,
+            #posts2,
+            #posts3 {
+                width: 250px;
+                height: 200px;;
+                margin: 0 auto;
+                border: 2px solid red;
+            }
+        </style>
+    </head>
+    <body onload="return ran_col()">
+        <div id="posts">
+        </div>
+        <div id="posts1">
+        </div>
+        <div id="posts2">
+        </div>
+        <div id="posts3">
+        </div>
+        <script type="text/javascript">
+            function ran_col() { //function name
+                var color = '#'; // hexadecimal starting symbol
+                var letters = ['1abc9c','3498db','9b59b6','8e44ad','e74c3c','d35400','16a085','e67e22']; //Set your colors here
+                color += letters[Math.floor(Math.random() * letters.length)];
+                var color1 = '#'; // hexadecimal starting symbol
+                var letters1 = ['1abc9c','3498db','9b59b6','8e44ad','e74c3c','d35400','16a085','e67e22']; //Set your colors here
+                color1 += letters1[Math.floor(Math.random() * letters1.length)];
+                var color2 = '#'; // hexadecimal starting symbol
+                var letters2 = ['1abc9c','3498db','9b59b6','8e44ad','e74c3c','d35400','16a085','e67e22']; //Set your colors here
+                color2 += letters2[Math.floor(Math.random() * letters2.length)];
+                var color3 = '#'; // hexadecimal starting symbol
+                var letters3 = ['1abc9c','3498db','9b59b6','8e44ad','e74c3c','d35400','16a085','e67e22']; //Set your colors here
+                color3 += letters3[Math.floor(Math.random() * letters3.length)];
+                document.getElementById('posts').style.background = color; 
+                 document.getElementById('posts1').style.background = color1;
+                  document.getElementById('posts2').style.background = color2;
+                   document.getElementById('posts3').style.background = color3;// Setting the random color on your div element.
+            }
+        </script>
+    </body>
+</html>

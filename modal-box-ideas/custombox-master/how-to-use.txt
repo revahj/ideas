@@ -1,0 +1,138 @@
+***** FOR DEMOSTRATIONS OF THE DIFFERENT EFFECTS,
+GO TO THE PROJECT HOMEPAGE LISTED BELOW THIS LINE *****
+
+http://dixso.github.io/custombox/
+
+
+How to use:
+
+1) Include jQuery (Compatible with v1.7+):
+
+In just about every case, it's best to place all your script references at the end of the page, just before: </body>.
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+
+2) Include jquery.custombox.js code:
+
+In just about every case, it's best to place all your script references at the end of the page, just before: </body>.
+<script src="src/jquery.custombox.js"></script>
+
+3) Include jquery.custombox.css code:
+
+Insert it in the section of your HTML document, after: <html>.
+<link rel="stylesheet" href="src/jquery.custombox.css">
+
+4) Call the plugin when the body is on load:
+<script>
+$(function () {
+    $('#element').on('click', function ( e ) {
+        $.fn.custombox( this );
+        e.preventDefault();
+    });
+});
+</script>
+
+$.fn.custombox('close')     Allow the user to close the modal.
+
+
+- Example
+$('#example1').on('click', function ( e ) {
+    $.fn.custombox( this, {
+        overlay: false,
+        effect: 'fadein'
+    });
+    e.preventDefault();
+});
+Ajax
+
+- Example
+$('#example2').on('click', function ( e ) {
+    $.fn.custombox( this, {
+        effect: 'newspaper'
+    });
+    e.preventDefault();
+});
+Auto start
+
+- Example
+$.fn.custombox({
+    url: 'demo/xhr/ajax.html'
+});
+Error :(
+
+- Example
+$('#example4').on('click', function ( e ) {
+    $.fn.custombox( this, {
+        effect: 'slit'
+    });
+    e.preventDefault();
+});
+Callbacks
+
+- Example
+$('#example5').on('click', function ( e ) {
+    $.fn.custombox( this, {
+        open: function () {
+            alert('open');
+        },
+        complete: function () {
+            alert('complete');
+        },
+        close: function () {
+            alert('close');
+        }
+    });
+    e.preventDefault();
+});
+Other style
+
+- Example
+$('#example6').on('click', function ( e ) {
+    $.fn.custombox( this );
+    e.preventDefault();
+});
+Custom effect 1
+
+- Example
+$('#example7').on('click', function ( e ) {
+    $.fn.custombox( this, {
+        effect:         'fadein',
+        overlayColor:   '#FFF',
+        overlayOpacity: 1,
+        customClass:    'justme',
+        speed:          200
+    });
+    e.preventDefault();
+});
+Custom effect 2
+
+- Example
+The Javascript:
+$('#example8').on('click', function ( e ) {
+    $.fn.custombox( this, {
+        effect:         'slide',
+        position:       'center',
+        customClass:    'customslide',
+        speed:          200
+    });
+    e.preventDefault();
+});
+The CSS (Prefix: custombox-show and custombox-close):
+.custombox-close.customslide .custombox-modal-content {
+    -webkit-transform: scale(2);
+    -ms-transform: scale(2);
+    transform: scale(2);
+    opacity: 1;
+    -webkit-transition-property: all;
+    -ms-transition-property: all;
+    transition-property: all;
+}
+Custom open and close position.
+
+- Example
+$('#example8').on('click', function ( e ) {
+    $.fn.custombox( this, {
+        effect:     'slide',
+        position:   'left, right'
+    });
+    e.preventDefault();
+});
